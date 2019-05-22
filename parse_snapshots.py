@@ -21,4 +21,4 @@ for snap in snaps["Snapshots"]:
         if not start_year or old_time.year >= start_year:
             old_snaps.append(snap['SnapshotId'])
 
-print '|'.join([str(x) for x in old_snaps])
+print('|'.join([str(x) for x in old_snaps]))
