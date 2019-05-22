@@ -4,12 +4,16 @@ Scripts to help automate managing AWS servers
 
 ## Installation
 The current scripts are BASH shell scripts written for Linux.
+
 Be sure that they are executable, and then run with ./{scriptname}.sh
-Helper scripts may be written in Python. These were written for python 3.
+
+Helper scripts were written for python 3.
 
 ## Snapshot
  > Requires awscli
+ 
  > `sudo apt install awscli`
+ 
  > requires python, relies on script 'parse_snapshots.py'
 
 ### Configure:
