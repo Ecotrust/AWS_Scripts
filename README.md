@@ -3,11 +3,19 @@ Scripts to help automate managing AWS servers
 
 
 ## Installation
+### Bash
 The current scripts are BASH shell scripts written for Linux.
 
 Be sure that they are executable, and then run with ./{scriptname}.sh
 
+### Python
 Helper scripts were written for python 3.
+You can either install the required python libraries directly to your server with:
+
+`pip install -r requirements.txt`
+
+Or you can install these within a vitrual environment (preferred) and be sure to activate that before running these scripts.
+
 
 ## Snapshot
  > Requires awscli
