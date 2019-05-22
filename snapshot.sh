@@ -8,6 +8,7 @@ export AWS_VOLUME_ID="SET ME"
 export DELETE_AFTER_DAYS=90
 # Point this at your venv python: .../env/bin/python
 export PYTHON_BIN=python
+export PARSE_SCRIPT=parse_snapshots.py
 
 echo
 echo ========== BEGIN SNAPSHOT SCRIPT ==========
@@ -29,7 +30,7 @@ snapshots=`aws ec2 describe-snapshots --owner self --output json`
 
 ### parse_snapshots.py takes the json list of snapshots and the age at
 ###     which they are considered to be old in "DAYS"
-old_snaps=`$PYTHON_BIN parse_snapshots.py "$snapshots" $DELETE_AFTER_DAYS`
+old_snaps=`$PYTHON_BIN $PARSE_SCRIPT "$snapshots" $DELETE_AFTER_DAYS`
 IFS="|" read -a old_array <<< "$old_snaps"
 
 for i in "${old_array[@]}"
