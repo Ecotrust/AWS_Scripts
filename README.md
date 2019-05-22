@@ -19,9 +19,9 @@ Or you can install these within a vitrual environment (preferred) and be sure to
 
 ## Snapshot
  > Requires awscli
- 
+
  > `sudo apt install awscli`
- 
+
  > requires python, relies on script 'parse_snapshots.py'
 
 ### Configure:
@@ -31,7 +31,9 @@ From your AWS instance you will need:
  * Your AWS Secret Access Key (you get this when you create a user)
  * The Volume ID of the EBS volume you wish to back up ('vol-...')
  * (Optional) The number of days of age at which point you wish to delete old backups
-    * This is set to 90 by default,
+    * This is set to 90 by default
+ * (Optional) The location of the python binary you wish to run
+    * If you have a virtual environment, point this at it, such as: /path/to/venv/bin/python
 
 ### Run:
 Run with `./snapshot.sh`
